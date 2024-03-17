@@ -998,8 +998,8 @@ var list =
     "year": 2023,
     "name": "Szkoła Podstawowa nr 96 im. Ireny Kosmowskiej Warszawa",
     "rating": 66.423,
-    "latitude": 52.23416,
-    "longitude": 20.96231
+    "latitude": 52.1133429523158,
+    "longitude": 21.014274590938598
   },
   {
     "year": 2023,
