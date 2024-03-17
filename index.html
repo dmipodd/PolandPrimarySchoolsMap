@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+    <title>Ranking Szkół Podstawowych na mapie - Warszawa i okolice</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+    <div id="map"></div> <!-- Map container -->
+    <footer>
+		<div class="contact-wrapper">
+			<div class="contact"><i class="fa-regular fa-user"></i> stworzona przez Dzmitry Paddubnik, 2024</div>
+			<div class="contact"><a href="./about.html"><i class="fa-regular fa-circle-question"></i> o mapie</a></div>
+		</div>
+    </footer>
+	<script src="script.js"></script>
+    <script>
+		var map = L.map('map'); // Initialize map and set initial view
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { // Add tile layer (OpenStreetMap)
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		
+		for (var i = 0; i < list.length; i++) {
+			let obj = list[i];
+
+			if (!obj.latitude) {
+				continue;
+			}
+
+			let coordinates = [obj.latitude, obj.longitude]; // Coordinates (latitude and longitude)
+				
+			let iconUrlText;
+			if (obj.rating > 70) {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png';
+			} else if(obj.rating > 65 && obj.rating <= 70) {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png';
+			} else if(obj.rating > 60 && obj.rating <= 65) {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png';
+			} else if(obj.rating > 50 && obj.rating <= 60) {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png';
+			} else if(obj.rating > 40 && obj.rating <= 50) {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png';
+			} else if(obj.rating > 25 && obj.rating <= 40) {
+				iconUrlText= 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
+			} else {
+				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png';
+			} 											
+			let iconn = new L.Icon({
+			  iconUrl: iconUrlText,
+			  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+			  iconSize: [25, 41],
+			  iconAnchor: [12, 41],
+			  popupAnchor: [1, -34],
+			  shadowSize: [41, 41]
+			});
+
+			let marker = L.marker(coordinates, {icon: iconn}).addTo(map);
+			marker.bindPopup("" + obj.rating + "<br/>" + obj.name).openPopup();
+		}
+		map.setView([52.2184793213402, 21.02045666130118], 12);
+    </script>
+</body>
+</html>
+
