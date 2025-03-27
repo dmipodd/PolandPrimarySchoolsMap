@@ -1,7 +1,7 @@
 var list =
 [
   {
-``    "name": "Szkoła Podstawowa Parnas Wrocław",
+    "name": "Szkoła Podstawowa Parnas Wrocław",
     "rating2025": 80.74,
     "rating2024": 73.384,
     "rating2023": 0.0,

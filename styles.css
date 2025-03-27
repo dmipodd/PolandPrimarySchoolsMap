@@ -31,6 +31,12 @@ body {
 		text-decoration: none;
 		color: #5d5a5a;
 	}
+
+    a.year {
+        text-decoration: underline overline;
+        cursor: pointer;
+        color: #0039a6;
+    }
 	
 	i {
 		font-size: 80%;
