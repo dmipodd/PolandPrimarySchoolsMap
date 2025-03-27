@@ -40,17 +40,20 @@
 			let coordinates = [obj.latitude, obj.longitude]; // Coordinates (latitude and longitude)
 				
 			let iconUrlText;
-			if (obj.rating > 70) {
+			if (obj.rating2024 == -1) {
+				iconUrlText = 'new_school.png';
+				obj.rating2024 = "No data.";
+			} else if (obj.rating2024 > 70) {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png';
-			} else if(obj.rating > 65 && obj.rating <= 70) {
+			} else if(obj.rating2024 > 65 && obj.rating2024 <= 70) {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png';
-			} else if(obj.rating > 60 && obj.rating <= 65) {
+			} else if(obj.rating2024 > 60 && obj.rating2024 <= 65) {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png';
-			} else if(obj.rating > 50 && obj.rating <= 60) {
+			} else if(obj.rating2024 > 50 && obj.rating2024 <= 60) {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png';
-			} else if(obj.rating > 40 && obj.rating <= 50) {
+			} else if(obj.rating2024 > 40 && obj.rating2024 <= 50) {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png';
-			} else if(obj.rating > 25 && obj.rating <= 40) {
+			} else if(obj.rating2024 > 25 && obj.rating2024 <= 40) {
 				iconUrlText= 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
 			} else {
 				iconUrlText = 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png';
@@ -65,9 +68,9 @@
 			});
 
 			let marker = L.marker(coordinates, {icon: iconn}).addTo(map);
-			marker.bindPopup("" + obj.rating + "<br/>" + obj.name).openPopup();
+			marker.bindPopup("" + obj.rating2024 + "<br/>" + obj.name).openPopup();
 		}
-		map.setView([52.2184793213402, 21.02045666130118], 12);
+		map.setView([51.10273887372642, 17.023892226255573], 12);
     </script>
 </body>
 </html>
