@@ -37,6 +37,11 @@ body {
         cursor: pointer;
         color: #0039a6;
     }
+
+    .year.selected {
+        color: red;
+        font-weight: bold;
+    }
 	
 	i {
 		font-size: 80%;
