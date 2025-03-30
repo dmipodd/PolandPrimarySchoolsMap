@@ -24,6 +24,7 @@
 			<div class="contact"><a href="./about.html"><i class="fa-regular fa-circle-question"></i> about</a></div>
 		</div>
     </footer>
+	<script src="mapView.js"></script>
 	<script src="schoolsWarsaw.js"></script>
 	<script src="schoolsWroclaw.js"></script>
     <script>
@@ -81,7 +82,9 @@
 				let marker = L.marker(coordinates, {icon: iconn}).addTo(map);
 				marker.bindPopup(getMarkerTextFor(obj, ratingField)).openPopup();
 			}
-			map.setView([51.10273887372642, 17.023892226255573], 12);
+
+			let { lat, lng, zoom } = cacheAndGetViewConfiguration();
+			map.setView([lat, lng], zoom);
 		}
 
 		function getIconUrlFor(obj, ratingField) {

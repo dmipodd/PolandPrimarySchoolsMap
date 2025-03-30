@@ -6530,5 +6530,57 @@ var schoolsWarsaw =
     "numberOfPresentAnnualRatings": 2,
     "latitude": 52.22556,
     "longitude": 21.06828
+  },
+  {
+    "name": "Szkoła Podstawowa im. Witolda Doroszewskiego Nadarzyn",
+    "rating2025": 58.416,
+    "rating2024": 56.403,
+    "rating2023": 59.461,
+    "rating2022": 58.618,
+    "rating2021": -1.0,
+    "rating2020": -1.0,
+    "average": 58.22,
+    "numberOfPresentAnnualRatings": 4,
+    "latitude": 52.09652876223528,
+    "longitude": 20.809495627461153
+  },
+    {
+     "name": "Szkoła Podstawowa im. 11 Listopada Żółwin",
+     "rating2025": 58.15,
+     "rating2024": 61.942,
+     "rating2023": 57.904,
+     "rating2022": 58.618,
+     "rating2021": -1.0,
+     "rating2020": -1.0,
+     "average": 59.15,
+     "numberOfPresentAnnualRatings": 4,
+     "latitude": 52.097466867506434,
+     "longitude": 20.724763563585544
+    },
+   {
+     "name": "Szkoła Podstawowa im. Fryderyka Chopina Książenice",
+     "rating2025": 60.511,
+     "rating2024": 62.871,
+     "rating2023": 64.366,
+     "rating2022": 57.8,
+     "rating2021": -1.0,
+     "rating2020": -1.0,
+     "average": 61.39,
+     "numberOfPresentAnnualRatings": 4,
+     "latitude": 52.07199726203812,
+     "longitude": 20.695245399626348
+   },
+  {
+    "name": "Szkoła Podstawowa Młochów",
+    "rating2025": 65.355,
+    "rating2024": 58.968,
+    "rating2023": 62.72,
+    "rating2022": 54.821,
+    "rating2021": -1.0,
+    "rating2020": -1.0,
+    "average": 60.47,
+    "numberOfPresentAnnualRatings": 4,
+    "latitude": 52.04968519493355,
+    "longitude": 20.77315550531338
   }
 ]

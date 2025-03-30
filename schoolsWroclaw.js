@@ -1541,5 +1541,18 @@ var schoolsWroclaw =
     "numberOfPresentAnnualRatings": 0,
     "latitude": 51.175744468197024,
     "longitude": 17.004748967570062
-  }
+  },
+ {
+   "name": "nowa szkoła w budowie (start z 2026)",
+   "rating2025": -1.0,
+   "rating2024": -1.0,
+   "rating2023": -1.0,
+   "rating2022": -1.0,
+   "rating2021": -1.0,
+   "rating2020": -1.0,
+   "average": -1.0,
+   "numberOfPresentAnnualRatings": 0,
+   "latitude": 51.059954765809884,
+   "longitude": 17.01327460451804
+ }
 ]
