@@ -39,7 +39,7 @@ body {
     }
 
     .year.selected {
-        color: red;
+        color: darkred;
         font-weight: bold;
     }
 	

@@ -113,13 +113,24 @@
 		function getMarkerTextFor(obj, ratingField) {
 			let ratingIsNotPresent = isRatingNotPresent(obj, ratingField);
 			let rating = ratingIsNotPresent ? "No data." : "" + obj[ratingField];
-			if (ratingIsNotPresent) {
+			let name = obj.name;
+
+			if (ratingField != 'average') {
 				return rating + "<br/>" + obj.name;
 			}
-			if (ratingField == 'average') {
-				return rating + " (calculated by " + obj.numberOfPresentAnnualRatings + " year(s)) <br/>" + obj.name;
-			}
-			return rating + "<br/>" + obj.name;
+
+			let tableHtml = "<table border='1' style='border-collapse: collapse; width: 100%; text-align: center;'>";
+			tableHtml += "<tr><th>Year</th><th>Rating</th></tr>";
+
+			[2025, 2024, 2023, 2022, 2021, 2020].forEach(year => {
+				let ratingValue = obj["rating" + year];
+				let displayRating = ratingValue === -1 ? "No data" : ratingValue.toFixed(2);
+				tableHtml += `<tr><td>${year}</td><td>${displayRating}</td></tr>`;
+			});
+
+			tableHtml += "</table>";
+
+			return `${rating} (calculated by ${obj.numberOfPresentAnnualRatings} year(s)) <br/><strong>${name}</strong><br/>${tableHtml}`;
 		}
 
 		function highlightClickedYear(event, year) {
