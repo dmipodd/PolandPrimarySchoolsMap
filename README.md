@@ -1,2 +1,2 @@
-This is a map of primary schools in Warsaw and its surroundings, categorized based on 8th-grade exam results.
-The map is available at https://warsawprimaryschoolsmap.netlify.app/
+The map shows primary schools along with their ratings, based on 8-year class exam results. Map includes 3 cities - Warsaw, poznan and Wroclaw.
+The map is available at https://polandprimaryschools.netlify.app/
