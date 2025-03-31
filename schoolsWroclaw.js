@@ -322,8 +322,8 @@ var schoolsWroclaw =
     "rating2020": -1.0,
     "average": 65.59,
     "numberOfPresentAnnualRatings": 2,
-    "latitude": 51.0726189,
-    "longitude": 16.9969963
+    "latitude": 51.07433932271781,
+    "longitude": 16.989382063372624
   },
   {
     "name": "Szkoła Podstawowa nr 32 im. 100-lecia Niepodległości Polski Wrocław",
