@@ -474,5 +474,18 @@ var schoolsGdynia =
     "numberOfPresentAnnualRatings": 4,
     "latitude": 54.548085324846404,
     "longitude": 18.446287525382402
+  },
+  {
+    "name": "Szkoła Podstawowa Hel",
+    "rating2025": 51.24,
+    "rating2024": 49.179,
+    "rating2023": 53.388,
+    "rating2022": 46.584,
+    "rating2021": -1.0,
+    "rating2020": -1.0,
+    "average": 50.1,
+    "numberOfPresentAnnualRatings": 4,
+    "latitude": 54.60806048882747,
+    "longitude": 18.801714218718416
   }
 ]
