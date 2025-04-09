@@ -487,5 +487,18 @@ var schoolsGdynia =
     "numberOfPresentAnnualRatings": 4,
     "latitude": 54.60806048882747,
     "longitude": 18.801714218718416
+  },
+  {
+    "name": "Szkoła Podstawowa im. Józefa Wybickiego Jastarnia",
+    "rating2025": 49.33,
+    "rating2024": 57.935,
+    "rating2023": 54.057,
+    "rating2022": 51.369,
+    "rating2021": -1.0,
+    "rating2020": -1.0,
+    "average": 53.17,
+    "numberOfPresentAnnualRatings": 4,
+    "latitude": 54.700447258424916,
+    "longitude": 18.67386337034545
   }
 ]
